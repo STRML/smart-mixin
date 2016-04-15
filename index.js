@@ -52,7 +52,7 @@ var mixins = module.exports = function makeMixinFunction(rules, _opts){
             var wrapIfFunction = function(thing){
                 return typeof thing !== "function" ? thing
                 : function(){
-                    return thing.call(this, arguments);
+                    return thing.apply(this, arguments);
                 };
             };
 
